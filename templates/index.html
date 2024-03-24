@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi portfolio</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/proyecto.html">Proyectos</a></li>
-                <li><a href="/experiencia.html">Experiencia</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
 
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Bienvenidos a mi página personal</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto maxime, nam, a sed consequatur tenetur doloribus architecto aspernatur pariatur, quis illum. Laboriosam facere libero similique, error placeat nesciunt! Voluptatem, aut.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis officia laboriosam dolorum accusantium necessitatibus totam accusamus nulla dignissimos rem excepturi enim sit dolorem dolore ab inventore, adipisci voluptatum nesciunt dicta?</p>
-    </main>
-    <footer>
-        <p>Esta página es de libre uso</p>
-    </footer>
-</body>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"> 
+        <link rel="stylesheet" href="/static/css/flat-remix.css">
+        <link rel="stylesheet" href="/static/css/styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">M<span class="headerlogo">D</span>M</header>
+            <nav class="navbar">
+                <a class="navbar_a" href="/templates/index.html">Inicio</a>
+                <a class="navbar_a" href="/templates/biografia.html">Biografía</a>
+                <a class="navbar_a" href="/templates/portfolio.html">Portfolio</a>
+                <a class="navbar_a" href="/templates/contacto.html">Contacto</a>
+            </nav>
+            <main class="main">
+                <div class="content">
+                    <h1 class="presentacion">Soy <span class="nombre"> Manuel </span>Diestre Morcillo</h1>
+                    <p class="p-presentacion">Hola, soy Manuel Diestre Morcillo, un apasionado desarrollador de software con experiencia en la creación de soluciones innovadoras y eficientes. En mi portafolio, encontrarás una variedad de proyectos que demuestran mis habilidades y mi enfoque en el desarrollo de aplicaciones web y móviles de calidad.</p>
+                    <a download href="/static/MDM_CV_ 2023.pdf">
+                        <button class="descarga-cv" download="MDM_CV_2023">Descarga CV</button>
+                    </a>
+                </div>
+                <img class="img" src="/static/images/Foto.jpg">
+            </main>
+            <footer class="pie-pagina">Portfolio - Manuel Diestre Morcillo 2024 - Web Developer Full Stack Junior</footer>
+        </div>
+    </body>
 </html>

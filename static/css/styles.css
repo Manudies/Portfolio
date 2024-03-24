@@ -1,0 +1,107 @@
+:root {
+    --primary-color: #c2c6cE;
+    --secondary-color: #f01818;
+    --terciary-color:#568281;
+
+    --neutral-100: #f0f0f0;
+    --neutral-50: #888;
+    --neutral-0: #000;
+
+    --default-border: solid thin var(--secondary-color);
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color:var(--primary-color)
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    background-color:var(--terciary-color);
+    color:var(--neutral-100);
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.headerlogo{
+    color: var(--neutral-0);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:var(--neutral-0);
+}
+.navbar .navbar_a{
+    font-size: 1.1rem;
+    display: flex;
+    padding: 8px 30px;
+    color: var(--neutral-100);
+    transition: ease-in 0.2s;
+
+}
+
+.navbar .navbar_a:hover{
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--neutral-0);
+    transition: ease-in 0.2s;
+    border-radius: 6px 6px 0px 0px;
+    padding: 10px 35px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0px auto;
+    width: 80vw;
+    height: 80vw;
+}
+
+.presentacion{
+    color: var(--neutral-0);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.p-presentacion{
+    font-size: 1rem;
+    color: var(--neutral-0);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.nombre{
+    font-size: 2rem;
+    color: var(--terciary-color);
+    
+}
+.img{
+    mix-blend-mode:multiply;
+    /* Clip-path: inset(4px 1px 1px 5px); */
+    margin: 5px auto;
+    max-width: 70%;
+    opacity: 0.75;
+    border-radius: 100%;
+}
+
+.descarga-cv{
+    width:150px;
+    background-color: var(--terciary-color);
+    border-style: none;
+    border-radius: 20px;
+    text-decoration: none;
+ 
+}
+
+.descarga-cv:hover{
+    background-color: var(--neutral-0);
+    text-decoration: none;
+}
+.pie-pagina{
+    margin: 5px auto;
+    width: 80vw;
+    height: 80vw;
+}
