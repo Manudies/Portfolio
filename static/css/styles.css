@@ -42,6 +42,14 @@
     justify-content: space-evenly;
     background-color:var(--neutral-0);
 }
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 .navbar .navbar_a{
     font-size: 1.1rem;
     display: flex;
@@ -184,15 +192,16 @@
     width: 90vw;
     padding: 1em 1em 0 1em;
     font-weight: 800;
-    margin: 0 50px;
+    margin: 0 auto;
 
 }
 
 .formulario{
     display: flex;
     flex-direction: column;
-    width: 400px;
-    margin: 0 75px;
+    width: 40vw;
+    min-width: 200px;
+    margin: 0 auto;
     padding: 1em;
     border-style: none;
     text-decoration: none;
@@ -213,6 +222,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     width: 90vw;
+    min-width: 300px;
     margin: auto;
 }
 
