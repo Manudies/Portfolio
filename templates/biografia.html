@@ -11,32 +11,28 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"> 
         <link rel="stylesheet" href="/static/css/flat-remix.css">
         <link rel="stylesheet" href="/static/css/styles.css">
-        
     </head>
     <body>
-        <header>Portfolio Manuel Diestre Morcillo-2024</header>
-        <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="biografia.html">Biografía</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-        <main>
-            <h1>Biografía</h1>
-            
-        </main>
+        <div class="wrapper">
+            <header class="header">M<span class="headerlogo">D</span>M</header>
+            <nav class="navbar">
+                <a class="navbar_a" href="/templates/index.html">Inicio</a>
+                <a class="navbar_a" href="/templates/biografia.html">Biografía</a>
+                <a class="navbar_a" href="/templates/portfolio.html">Portfolio</a>
+                <a class="navbar_a" href="/templates/contacto.html">Contacto</a>
+            </nav>
+            <main class="main">
+                <div class="content">
+                    <h1 class="presentacion">Un poco sobre<span class="nombre"> mí </span></h1>
+                    <p class="bio">Manuel Diestre Morcillo nacido el 10 de mayo de 1988 en Badajoz, España, Desde pequeño, mostré un gran interés por la creatividad y la resolución de problemas. Esta inclinación me llevó a estudiar Arquitectura Técnica en la Universidad de Extremadura.</p>
+                    <p  class="bio">Durante mis años universitarios, me destacaba por mi habilidad para combinar la estética con la funcionalidad en mis proyectos arquitectónicos. Sin embargo, tras graduarme, decidí explorar un camino totalmente diferente: el mundo de la programación. Me intrigaba la posibilidad de crear soluciones digitales innovadoras, así que me sumergí en el aprendizaje autodidacta de diversos lenguajes de programación y tecnologías informáticas.</p>
+                    <p  class="bio">Con determinación y dedicación, adquirí habilidades sólidas en desarrollo web y de software. Mi formación en arquitectura me brindó una perspectiva única en el desarrollo de interfaces de usuario intuitivas y experiencias de usuario excepcionales.</p>
+                    <p  class="bio">Después de trabajar en varios proyectos independientes y colaborativos, encontré mi pasión en el desarrollo de aplicaciones móviles centradas en la experiencia del usuario. Mi capacidad para traducir conceptos complejos en soluciones digitales simples y efectivas me ha destacado como un desarrollador versátil y altamente solicitado en la industria tecnológica.</p>
+                    <p  class="bio">Actualmente, trabajo como desarrollador senior en una empresa de renombre, donde continúo desafiándome a mí mismo y contribuyendo con mi creatividad y experiencia al desarrollo de soluciones tecnológicas innovadoras. Mi viaje desde la arquitectura hasta la programación es un testimonio de mi determinación para seguir mi pasión y adaptarme a los cambios en un mundo en constante evolución.</p>
+                </div>
+                <img class="img-bio" src="/static/images/4956914_2595429.jpg">
+            </main>
+        </div>
         <footer class="pie-pagina">Portfolio - Manuel Diestre Morcillo 2024 - Web Developer Full Stack Junior</footer>
-
-    <!-- <script>
-        function load_templates() {
-            document.getElementById("header").innerHTML =
-            "<object data='components/header.html'>";
-                document.getElementById("navbar").innerHTML =
-            "<object data='components/navbar.html'>";
-            document.getElementById("footer").innerHTML =
-            "<object data='components/footer.html'>";
-        }
-        load_templates();
-    </script> -->
-</body>
+    </body>
 </html>
