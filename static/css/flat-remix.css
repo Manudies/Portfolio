@@ -205,7 +205,7 @@ select {
     height: 45px;
     padding: 0 10px;
     font-size: 14px;
-    font-weight: bold;
+    /* font-weight: bold; */
     cursor: text;
     user-select: text;
     -webkit-touch-callout: text;

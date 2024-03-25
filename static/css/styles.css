@@ -16,6 +16,7 @@
     min-height: 1200px;
     background-color:var(--primary-color)
 }
+
 .wrapper-portfolio{
     width: 100%;
     height: 100%;
@@ -59,33 +60,58 @@
     padding: 10px 35px;
 }
 
-.main{
-    padding-top: 20px;
+.main-index{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    align-items:center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .1fr 1r 0.1fr;
+    padding-top: 20px;
     margin: 0px auto;
-    width: 80vw;
-    min-height: 800px;
+    width: 90vw;
+    min-height: 400px;
 }
 
-.content a{
-    display: flex;
-    justify-content: center;
+.content{
+    display: grid;
+    width: 90vw;
+    margin: auto;
+    grid-template-columns: repeat(10 1fr);
+    grid-template-rows: repeat(10 1fr);
+    padding-top: 20px;
+    text-align: justify;
+
 }
+
+.content-port{
+    width: 90vw;
+    margin: auto;
+    text-align: justify;
+    color: var(--neutral-100);
+}
+    
 .presentacion{
+    grid-row: 1/2;
+    max-height: 50px;
+    color: var(--neutral-0);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.presentacion-bio{
+    grid-column: 1/5;
     color: var(--neutral-0);
     font-size: 1.6rem;
     font-weight: bold;
 }
 
 .p-presentacion{
+    grid-row:2/3;
     font-size: 1.25rem;
-    color: var(--neutral-0);
-    font-family:Arial, Helvetica, sans-serif;
     font-weight: 500;
     text-align: justify;
 }
 .bio{
+    grid-column:1/5;
     font-size: 1.25rem;
 }
 
@@ -95,8 +121,9 @@
     
 }
 .img{
+    grid-column: 2;
+    grid-row: 1/4;
     mix-blend-mode:multiply;
-    /* Clip-path: inset(4px 1px 1px 5px); */
     margin: 5px auto;
     min-width: 20%;
     max-width: 40%;
@@ -105,23 +132,32 @@
 }
 
 .img-bio{
+    grid-column: 5/10;
+    grid-row: 1/5;
     mix-blend-mode:multiply;
-    /* Clip-path: inset(4px 1px 1px 5px); */
-    margin: 5px auto;
-    min-width: 20%;
-    max-width: 40%;
+    max-width: 90%;
     opacity: 0.75;
-    border-radius: 100%;
+    border-radius: 75%;
+    margin: auto;
+
 }
 
-.main .content .enlace{
-    display: flex;
-    width: fit-content;
+.main-index .enlace .descarga-cv{
+    margin-top: 0px;
+}
 
+.enlace{
+    margin: auto;
+    padding: 0;
+    width:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .descarga-cv{
-    width:150px;
+    width: 100%;
+    justify-items:center ;
     background-color: var(--terciary-color);
     border-style: none;
     border-radius: 20px;
@@ -142,4 +178,104 @@
     width: 100%;
     height: 50px;
     background-color: var(--terciary-color);
+}
+
+.main-contacto h2{
+    width: 90vw;
+    padding: 1em 1em 0 1em;
+    font-weight: 800;
+    margin: 0 50px;
+
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 75px;
+    padding: 1em;
+    border-style: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--terciary-color);
+}
+.formulario button{
+    background-color: var(--terciary-color);
+    border-style: none;
+    border-radius: 20px;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.portfolio{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: auto;
+}
+
+.main-port .portfolio-h2 h2{
+    width: 90%;
+    margin: auto;
+    padding: 1em;
+    font-weight: 800;
+    margin-top: 0px;
+}
+
+.container{
+    margin: 5px;
+}
+
+.card{
+    flex-flow: colum wrap;
+    width: 300px;
+    background-color: var(--terciary-color);
+}
+
+.card-img-cripto{
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/6253962.jpg);
+    background-size: cover;
+}
+
+.card-img-pong{
+        width: 100%;
+        height: 300px;
+        background-image: url(../images/4317829.jpg);
+        background-size: cover;
+}
+
+.card-img-arkanoid{
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/pegatinas-coches-motos-arkanoid-logo.jpg);
+    background-size: cover;
+}
+
+.card-title{
+    display: flex;
+    padding: 10px;
+    font-size: 0.5em;
+    color:var(--neutral-0);
+    font-weight: 800;
+    justify-content: center;
+}
+
+.links-proyectos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.links-proyectos a{
+    color: var(--neutral-100);
+    text-decoration: none;
+}
+
+.links-proyectos i{
+    font-size: 3em;
+    margin-bottom: 15px;
+
 }
