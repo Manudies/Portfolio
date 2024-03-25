@@ -11,32 +11,36 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"> 
         <link rel="stylesheet" href="/static/css/flat-remix.css">
         <link rel="stylesheet" href="/static/css/styles.css">
-        
     </head>
     <body>
-        <header>Portfolio Manuel Diestre Morcillo-2024</header>
-        <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="biografia.html">Biografía</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-        <main>
-            <h1>Contacto</h1>
-            
-        </main>
-        <footer class="pie-pagina">Portfolio - Manuel Diestre Morcillo 2024 - Web Developer Full Stack Junior</footer>
+        <div class="wrapper">
+            <header class="header">M<span class="headerlogo">D</span>M</header>
+            <nav class="navbar">
+                <a class="navbar_a" href="/templates/index.html">Inicio</a>
+                <a class="navbar_a" href="/templates/biografia.html">Biografía</a>
+                <a class="navbar_a" href="/templates/portfolio.html">Portfolio</a>
+                <a class="navbar_a" href="/templates/contacto.html">Contacto</a>
+            </nav>
+            <main class="main-contacto">
+                <h2>Formulario de contacto:</h2>
+                <form class="formulario">
+                    <label for="nombre" >Nombre completo: </label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <label for="mail">Correo Electrónico: </label>
+                    <input type="email" name="mail" id="mail" placeholder="Mail">
+                    <label for="asunto">Asunto:</label>
+                    <select name="asunto" id="asunto">
+                        <option value="Contratar servicios">Contratar servicios</option>
+                        <option value="Consulta Técnica">Consulta Técnica</option>
+                        <option value="Concertar entrevista">Concertar entrevista</option>
+                    </select>
+                    <label for="textarea"> En que puedo ayudarte:</label>
+                    <textarea name="" id="texto" cols="30" rows="10" placeholder="Escribe aquí el motivo de tu contacto..."></textarea>
+                    <button>Enviar</button>
+                </form>
 
-    <!-- <script>
-        function load_templates() {
-            document.getElementById("header").innerHTML =
-            "<object data='components/header.html'>";
-                document.getElementById("navbar").innerHTML =
-            "<object data='components/navbar.html'>";
-            document.getElementById("footer").innerHTML =
-            "<object data='components/footer.html'>";
-        }
-        load_templates();
-    </script> -->
-</body>
+            </main>
+        </div>
+        <footer class="pie-pagina">Portfolio - Manuel Diestre Morcillo 2024 - Web Developer Full Stack Junior</footer>
+    </body>
 </html>
