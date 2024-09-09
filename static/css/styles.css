@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #c2c6cE;
-    --secondary-color: #f01818;
-    --terciary-color:#568281;
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --terciary-color:#00fffb;
 
     --neutral-100: #f0f0f0;
     --neutral-50: #888;
@@ -39,8 +39,7 @@
 
 .navbar{
     display: flex;
-    justify-content: space-evenly;
-    background-color:var(--neutral-0);
+    justify-content: right;
 }
 
 @media only screen and (max-width: 600px) {
@@ -51,10 +50,10 @@
 }
 
 .navbar .navbar_a{
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     display: flex;
     padding: 8px 30px;
-    color: var(--neutral-100);
+    color: var(--secondary-color);
     transition: ease-in 0.2s;
 
 }
@@ -116,8 +115,9 @@
     grid-row:2/3;
     font-size: 1.25rem;
     font-weight: 500;
-    text-align: justify;
+
 }
+
 .bio{
     grid-column:1/5;
     font-size: 1.25rem;
