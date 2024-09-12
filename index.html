@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel DM - Portfolio</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <header id="top">
+        <nav>
+            <div class="navbar">
+                <div class="logo" >
+                    <img class="logo-img" src="/static/images/LOGO MDM.jpeg" alt="Logo MDM">
+                    <!-- <p>MDM</p> -->
+                </div>
+                
+                <div class="menu">
+                    <a href="#sobre-mi"> Sobre mí</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="index.html" class="idioma">ES</a>
+                    <a href="index-en.html" class="idioma">EN</a>
+                    <button class="oscuro">
+                        <img src="/static/images/sun.png" alt="">
+                    </button>
+                    <button class="claro">
+                        <img src="/static/images/luna.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>   
+
+    <main>
+        <section id="inicio" class="inicio">
+            <div class="foto">
+                <img class="foto-personal" src="/static/images/IMG-20240803-WA0031.jpg" alt="">
+            </div>
+            <div class="presentacion">
+                <h1>Manuel Diestre Morcillo</h1>
+                <h2>Desarrollador Web Full Stack</h2>
+                <div class="enlaces">
+                    <a href="https://github.com/Manudies" target="_blank">
+                        <img src="/static/images/logotipo-de-github.png" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/in/manuel-diestre/" target="_blank">
+                        <img src="/static/images/logotipo-de-linkedin.png" alt="">
+                    </a>
+                    <a href="/static/Manuel_Diestre_CV_2024.pdf" target="_blank">
+                        <button class="CV-button" download="CV-ES.pdf">CV-ES</button>
+                    </a>
+                    <a href="/static/Manuel_Diestre_CV_2024_EN.pdf" target="_blank">
+                        <button class="CV-button" download="CV-EN.pdf">CV-EN</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="sobre-mi" class="sobre-mi">
+            <h1>Sobre mí <img src="/static/images/maleta.png" alt="maleta"></h1>
+            <p class="bio">Soy Manuel Diestre Morcillo, un Full Stack Developer en transición desde el sector de la Arquitectura Técnica, donde acumulé más de 6 años de experiencia gestionando proyectos y coordinando equipos. </p>
+                        <p class="bio">Mi pasión por la tecnología me llevó a especializarme en desarrollo web, completando dos bootcamps donde adquirí habilidades en JavaScript (React, Node, Express), Python (Flask), bases de datos como MySQL y MongoDB, y herramientas como Docker.</p>
+                        <p  class="bio">Me considero una persona perseverante y resolutiva, con un enfoque constante en el aprendizaje y el crecimiento. Estoy motivado por los proyectos innovadores y desafiantes, y busco aplicar mis habilidades tanto técnicas como de gestión en el desarrollo de soluciones web.</p>
+        </section>
+        <section id="proyectos" class="proyectos">
+            <h1>Proyectos <img src="/static/images/estrella.png" alt="estrella"></h1>
+            <div class="proyectos-grid">
+                <div class="tarjeta">
+                    <div class="tarjeta-img">
+                        <img src="/static/images//cripto.jpg" alt="Imagen de una criptomoneda">
+                    </div>
+                    <div class="texto-tarjeta">
+                        <div class="titulo-tarjeta">
+                            <h2>Monedero Crypto</h2>
+                            <p>Un monedero de cripto-monedas, que te permite comprar y vender criptomonedas con el cambio actual.</p>
+                            <h3>Tecnologías</h3>
+                            <div class="tecnologias">
+                                <img src="/static/images/HTML5.png" alt="logo HTML">
+                                <img src="/static/images/CSS3.png" alt="logo CSS">
+                                <img src="/static/images/Python.png" alt="logo Python">
+                                <img src="/static/images/Flask.png" alt="logo Flask">
+                                <img src="/static/images/SQLite.png" alt="logo SQLite">
+                            </div>
+                        </div>
+                        <div class="links-proyectos">
+                            <a href="https://github.com/Manudies/flask_redu.git" target="_blank">
+                                <button> Código </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-img">
+                        <img src="/static/images/pong.jpg" alt="Imagen de una criptomoneda">
+                    </div>
+                    <div class="texto-tarjeta">
+                        <div class="titulo-tarjeta">
+                            <h2>Pong</h2>
+                            <p>Mítico juego Pong.</p>
+                            <h3>Tecnologías</h3>
+                            <div class="tecnologias">
+                                <img src="/static/images/HTML5.png" alt="">
+                                <img src="/static/images/CSS3.png" alt="">
+                                <img src="/static/images/python-pygame-tutorial.png" alt="">
+                            </div>
+                        </div>
+                        <div class="links-proyectos">
+                            <a href="https://github.com/Manudies/Pong.git" target="_blank">
+                                <button> Código </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-img">
+                        <img src="/static/images/arkanoid-logo.jpg" alt="Imagen de una criptomoneda">
+                    </div>
+                    <div class="texto-tarjeta">
+                        <div class="titulo-tarjeta">
+                            <h2>Arkanoid</h2>
+                            <p>El clásico de los clásicos, Arkanoid.</p>
+                            <h3>Tecnologías</h3>
+                            <div class="tecnologias">
+                                <img src="/static/images/HTML5.png" alt="logo HTML">
+                                <img src="/static/images/CSS3.png" alt="logo CSS">
+                                <img src="/static/images/python-pygame-tutorial.png" alt="logo PyGame">
+                        </div>
+                    </div>
+                    <div class="links-proyectos">
+                        <a href="https://github.com/Manudies/flask_redu.git" target="_blank">
+                                <button>Código </button>     
+                        </a>
+
+                    </div>
+                </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-img">
+                        <img src="/static/images/quientin.png" alt="Imagen la aplicación Quentin Film">
+                    </div>
+                    <div class="texto-tarjeta">
+                        <div class="titulo-tarjeta">
+                            <h2>Quentin Film</h2>
+                            <p>Aplicación de busqueda de peliculas con API REST</p>
+                            <h3>Tecnologías</h3>
+                            <div class="tecnologias">
+                                <img src="/static/images/HTML5.png" alt="logo HTML">
+                                <img src="/static/images/CSS3.png" alt="logo CSS">
+                                <img src="/static/images/React.png" alt="logo React">
+                            </div>
+                        </div>
+                        <div class="links-proyectos">
+                            <a href="https://github.com/Manudies/quentin_reactino" target="_blank">
+                                <button> Código </button>   
+                            </a>
+                            <a href="https://peliculas.manudies.com/" target="_blank">
+                                <button class="live"> Live 
+                                    <img src="/static/images/enlace.png" alt="logo enlace">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-img">
+                        <img src="/static/images/Horizontes2.png" alt="Imagen la aplicación Horizontes lejanos">
+                    </div>
+                    <div class="texto-tarjeta">
+                        <div class="titulo-tarjeta">
+                            <h2>Horizontes lejanos</h2>
+                            <p>Aplicación web de viajes en la que poder buscar tu destino de vacaciones</p>
+                            <h3>Tecnologías</h3>
+                            <div class="tecnologias">
+                                <img src="/static/images/HTML5.png" alt="logo HTML">
+                                <img src="/static/images/CSS3.png" alt="logo CSS">
+                                <img src="/static/images/React.png" alt="logo React">
+                                <img src="/static/images/Node.js.png" alt="logo Node">
+                                <img src="/static/images/Express.png" alt="logo Express">
+                                <img src="/static/images/MongoDB.png" alt="logo MongoDB">
+                            </div>
+                        </div>
+                        <div class="links-proyectos">
+                            <a href="https://github.com/Manudies/horizontes_lejanos" target="_blank">
+                                <button> Código </button>   
+                            </a>
+                            <!-- <a href="https://peliculas.manudies.com/" target="_blank">
+                                <button class="live"> Live 
+                                    <img src="/static/images/enlace.png" alt="logo enlace">
+                                </button>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h1>Email <img src="/static/images/mail.png" alt="logo email"></h1>
+            <div class="email-container">
+                <input type="email" class="email" value="manudies@gmail.com" readonly>
+                <button class="button" onclick="openMailClient()"><img src="/static/images/flecha-correcta.png" alt=""></button>
+                <button class="button" onclick="copyToClipboard()"><img src="/static/images/copiar.png" alt=""></button>
+            </div>
+        </section>
+        <div class="scroll-button-container">
+            <a href="#top" class="scroll-button"><img src="/static/images/flecha-correcta-arriba.png" alt="flecha arriba"></a>
+        </div>
+    </main>
+    <script>
+        function openMailClient() {
+            window.location.href = "mailto:manudies@gmail.com";
+        }
+
+        function copyToClipboard() {
+            const email = "manudies@gmail.com";
+            navigator.clipboard.writeText(email).then(function() {
+                alert('Correo copiado al portapapeles: ' + email);
+            }, function(err) {
+                console.error('Error al copiar al portapapeles', err);
+            });
+        }
+    </script>
+    <script>
+        // Obtener los botones de modo oscuro y claro
+        const oscuroBtn = document.querySelector('.oscuro');
+        const claroBtn = document.querySelector('.claro');
+    
+        // Alternar entre los modos
+        oscuroBtn.addEventListener('click', () => {
+            document.body.classList.add('dark-mode');
+        });
+    
+        claroBtn.addEventListener('click', () => {
+            document.body.classList.remove('dark-mode');
+        });
+    </script>
+    
+</body>
+</html>

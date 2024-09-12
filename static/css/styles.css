@@ -1,290 +1,588 @@
-:root {
-    --primary-color: #ffffff;
-    --secondary-color: #000000;
-    --terciary-color:#00fffb;
-
-    --neutral-100: #f0f0f0;
-    --neutral-50: #888;
-    --neutral-0: #000;
-
-    --default-border: solid thin var(--secondary-color);
-}
-
-.wrapper{
-    width: 100%;
-    height: 100%;
-    min-height: 1200px;
-}
-
-.wrapper-portfolio{
-    width: 100%;
-    height: 100%;
-    min-height: 1200px;
-    background-image: url("/static/images/cubes-2492010_1280.jpg");
-    background-size: cover;
-}
-.header{
-    display: flex;
-    justify-content: center;
-    background-color:var(--terciary-color);
-    color:var(--neutral-100);
-    font-size: 3rem;
-    font-weight: 800;
-}
-
-.headerlogo{
-    color: var(--neutral-0);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar{
     display: flex;
-    justify-content: right;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    background: #ffffff;
 }
 
-@media only screen and (max-width: 600px) {
-    .navbar {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-.navbar .navbar_a{
-    font-size: 0.9rem;
+.menu{
     display: flex;
-    padding: 8px 30px;
-    color: var(--secondary-color);
-    transition: ease-in 0.2s;
-
-}
-
-.navbar .navbar_a:hover{
-    text-decoration: none;
-    background-color: var(--primary-color);
-    color: var(--neutral-0);
-    transition: ease-in 0.2s;
-    border-radius: 6px 6px 0px 0px;
-    padding: 10px 35px;
-}
-
-.main{
-    display: grid;
-    align-items:center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: .1fr 1r 0.1fr;
-    padding-top: 20px;
-    margin: 0px auto;
-    width: 90vw;
-    min-height: 400px;
-}
-
-.content{
-    display: grid;
-    width: 90vw;
-    margin: auto;
-    grid-template-columns: repeat(10 1fr);
-    grid-template-rows: repeat(10 1fr);
-    padding-top: 20px;
-    text-align: justify;
-
-}
-
-.content-port{
-    width: 90vw;
-    margin: auto;
-    text-align: justify;
-    color: var(--neutral-100);
-}
-    
-.presentacion{
-    grid-row: 1/2;
-    max-height: 50px;
-    color: var(--neutral-0);
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
-.presentacion-bio{
-    grid-column: 1/5;
-    color: var(--neutral-0);
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
-.p-presentacion{
-    grid-row:2/3;
-    font-size: 1.25rem;
-    font-weight: 500;
-
-}
-
-.bio{
-    grid-column:1/5;
-    font-size: 1.25rem;
-}
-
-.nombre{
-    font-size: 2rem;
-    color: var(--terciary-color);
-    
-}
-.img{
-    grid-column: 2;
-    grid-row: 1/4;
-    mix-blend-mode:multiply;
-    margin: 5px auto;
-    min-width: 20%;
-    max-width: 40%;
-    opacity: 0.75;
-    border-radius: 100%;
-}
-
-.img-bio{
-    grid-column: 5/10;
-    grid-row: 1/5;
-    mix-blend-mode:multiply;
-    max-width: 90%;
-    opacity: 0.75;
-    border-radius: 75%;
-    margin: auto;
-
-}
-
-.main-index .enlace .descarga-cv{
-    margin-top: 0px;
-}
-
-.enlace{
-    margin: auto;
-    padding: 0;
-    width:150px;
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
-.descarga-cv{
-    width: 100%;
-    justify-items:center ;
-    background-color: var(--terciary-color);
-    border-style: none;
-    border-radius: 20px;
+/* Crear el efecto de este enlace: https://www.youtube.com/watch?v=KwoSm0E8MOE */
+
+/* .menu a:nth-child(1){ */
+    /* background-color: #9febb6; */
+    /* transition: background-color 0.5s ease; Añadimos la transición */
+/* } */
+
+
+.menu a{
+    border-radius: 5px;
+    text-transform: uppercase;
     text-decoration: none;
- 
+    font-size: 13px;
+    color: #000000;
+    padding: 15px;
+    /* transition: background-color 0.5s ease; Añadimos la transición */
 }
 
-.descarga-cv:hover{
-    background-color: var(--neutral-0);
+.menu a:hover, .menu button:hover{
+    background-color: #9febb6;
+    transition: 1s;
+    
+}
+
+.menu .idioma{
     text-decoration: none;
-}
-.pie-pagina{
-    color:var(--neutral-100);
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px 15px;
-    margin: 0px;
-    width: 100%;
-    height: 50px;
-    background-color: var(--terciary-color);
+    color: #000000;
+    /* margin: 10px; */
 }
 
-.main-contacto h2{
-    width: 90vw;
-    padding: 1em 1em 0 1em;
-    font-weight: 800;
-    margin: 0 auto;
+.menu .oscuro,
+.menu .claro{
+    text-decoration: none;
+    border: none;
+    background-color: inherit;
+    margin: 15px;
+}
+
+.menu .oscuro:hover,
+.menu .claro:hover{
+    cursor: pointer;
+}
+
+.menu .oscuro img,
+.menu .claro img{
+    width: 25px;
 
 }
 
-.formulario{
+.logo-img{
+    height: 60px;
+}
+
+
+
+main{
     display: flex;
     flex-direction: column;
-    width: 40vw;
-    min-width: 200px;
-    margin: 0 auto;
-    padding: 1em;
-    border-style: none;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--terciary-color);
-}
-.formulario button{
-    background-color: var(--terciary-color);
-    border-style: none;
-    border-radius: 20px;
-    text-decoration: none;
+    align-items: center;
     justify-content: center;
 }
 
-.portfolio{
+.inicio{
+    width: 600px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    border-bottom: 2px solid #0b8f33;
+}
+
+.foto .foto-personal{
+    object-fit: cover;
+    /* max-width: 200px; */
+    max-height: 200px;
+    border-radius: 0%;
+    border: 3px solid #a0a0a059;
+    clip-path:inset(0 0 0 0 round 50%); 
+    margin-right: 30px;
+}
+.presentacion{
+    max-width: 600px;
+}
+
+.enlaces{
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
-    width: 90vw;
-    min-width: 300px;
-    margin: auto;
-}
-
-.main-port .portfolio-h2 h2{
-    width: 90%;
-    margin: auto;
-    padding: 1em;
-    font-weight: 800;
-    margin-top: 0px;
-}
-
-.container{
-    margin: 5px;
-}
-
-.card{
-    flex-flow: colum wrap;
-    width: 300px;
-    background-color: var(--terciary-color);
-}
-
-.card-img-cripto{
+    align-items: center;
     width: 100%;
-    height: 300px;
-    background-image: url(../images/6253962.jpg);
-    background-size: cover;
+    padding-top: 10px;
 }
 
-.card-img-pong{
-        width: 100%;
-        height: 300px;
-        background-image: url(../images/4317829.jpg);
-        background-size: cover;
+.enlaces img{
+    width: 40px;
+    height: 40px;
 }
 
-.card-img-arkanoid{
-    width: 100%;
-    height: 300px;
-    background-image: url(../images/pegatinas-coches-motos-arkanoid-logo.jpg);
-    background-size: cover;
+.CV-button{
+    background-color: #9febb6;
+    /* background: #ffffff; */
+    color: #000000;
+    border: 2px solid #0b8f33;
+    /* border: 1px solid #000000; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.card-title{
+.sobre-mi{
+    width: 600px;
+    display: block;
+    padding-top: 60px;
+}
+
+.sobre-mi h1{
     display: flex;
-    padding: 10px;
-    font-size: 0.5em;
-    color:var(--neutral-0);
-    font-weight: 800;
+    align-items: center;
+    padding-bottom: 20px;
+    gap: 15px;
+}
+
+.sobre-mi h1 img {
+    width: 25px;
+}
+
+.sobre-mi p{
+    padding-bottom: 20px;
+}
+
+.proyectos {
+    width: 600px;
+    display: block;
+    padding-top: 60px;
+}
+
+.proyectos h1 {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    gap: 15px;
+}
+
+.proyectos h1 img {
+    width: 25px;
+}
+
+.proyectos-grid {
+    display: block;
+    width: 600px;
+}
+
+.tarjeta {
+    display: flex; /* Utilizamos Flexbox para crear las dos columnas */
+    width: 600px;
+    height: 280px;
+    background-color: #fbfafa;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.titulo-tarjeta {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
-.links-proyectos{
+.titulo-tarjeta h2 {
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+}
+
+.titulo-tarjeta h3 {
+    font-size: 1.4rem;
+    padding: 10px 0 ;
+}
+
+.texto-tarjeta {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 50%; /* El texto ocupa la mitad del ancho */
+    padding: 20px;
 }
 
-.links-proyectos a{
-    color: var(--neutral-100);
+.tecnologias {
+    display: flex;
+    gap: 10px;
+}
+
+.texto-tarjeta img {
+    /* width: 30px; */
+    height: 30px;
+}
+
+.tarjeta-img {
+    width: 50%; /* La imagen ocupa la otra mitad */
+
+}
+
+.tarjeta-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;  
+}
+
+.links-proyectos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.links-proyectos button {
+    width: 81px;
+    height: 30px;
+    border: 2px solid #0b8f33;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0px 5px;
+    background-color: #9febb6;
+    font-weight: bold;
     text-decoration: none;
 }
 
-.links-proyectos i{
-    font-size: 3em;
-    margin-bottom: 15px;
+.links-proyectos a button:hover {
+    background-color: #0b8f33;
+}
 
+.links-proyectos a button img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    padding: 0 0 0 5px;
+}
+
+.links-proyectos a .live {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+ 
+
+.contacto {
+    width: 600px;
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+}
+
+.contacto h1{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    gap: 15px;
+}
+
+.contacto h1 img {
+    width: 25px;
+}
+
+.contacto .email-container img {
+    width: 20px;
+}
+
+.email-container {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+
+
+}
+.email {
+    background-color: #dddcdc;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 10px;
+    margin-right: 10px;
+}
+.email-container .button {
+    background-color: #000000;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+}
+.email-container .button:hover {
+    background-color: rgb(132, 132, 132);
+}
+
+
+/* Boton de scroll */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-button-container {
+    padding: 0 0 50px 0;
+    text-align: center;
+}
+
+.scroll-button {
+    margin-top: 20px 0 50px 0;
+    background-color: #9febb6;
+    border: 2px solid #0b8f33;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.scroll-button img {
+    width: 20px;
+    transform: rotate(-90deg);
+}
+
+.scroll-button:hover {
+    background-color: #0b8f33;
+    color: #fff;
+}
+
+
+/* Modo oscuro */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .menu a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .menu img {
+    filter: invert(1);
+}
+
+body.dark-mode .menu a:hover, 
+body.dark-mode .menu button:hover {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode .enlaces img {
+    filter: invert(1);
+}
+
+body.dark-mode .CV-button {
+    background-color: #333;
+    border: 2px solid #9febb6;
+    color: #e0e0e0;
+}
+
+body.dark-mode .sobre-mi h1 img{
+    filter: invert(1);
+}
+
+body.dark-mode .proyectos h1 img{
+    filter: invert(1);
+
+}
+
+body.dark-mode .contacto h1 img{
+    filter: invert(1);
+}
+
+
+body.dark-mode .proyectos .tarjeta {
+    background-color: #1f1f1f;
+    border: 1px solid #3a3a3a;
+}
+
+body.dark-mode .contacto .email {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .email-container .button {
+    background-color: #3a3a3a;
+}
+
+
+/* Estilos generales para dispositivos con un ancho máximo de 375px */
+@media only screen and (max-width: 620px) {
+    /* Ajustes para la barra de navegación */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+
+    /* Ajustes para la sección de inicio */
+    .inicio {
+        width: 320px;
+        flex-direction: column;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .foto .foto-personal {
+        max-height: 150px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .presentacion {
+        width: 100%;
+        text-align: center;
+    }
+
+    .enlaces {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    .enlaces img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .CV-button {
+        width: 100px;
+    }
+
+    /* Ajustes para la sección de 'Sobre mí' */
+    .sobre-mi {
+        width: 320px;
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .sobre-mi h1 {
+        font-size: 1.5rem;
+        gap: 10px;
+    }
+
+    .sobre-mi p {
+        font-size: 1rem;
+    }
+
+    /* Ajustes para la sección de 'Proyectos' */
+    .proyectos {
+        width: 320px;
+        padding: 20px;
+    }
+
+    .proyectos h1 {
+        font-size: 1.5rem;
+        gap: 10px;
+    }
+
+    .proyectos-grid {
+        width: 100%;
+    }
+
+    .tarjeta {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .tarjeta-img {
+        width: 100%;
+    }
+
+    .tarjeta-img img {
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .texto-tarjeta {
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titulo-tarjeta h2 {
+        font-size: 1.5rem;
+    }
+
+    .titulo-tarjeta h3 {
+        font-size: 1.2rem;
+    }
+
+    .tecnologias img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .links-proyectos {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .links-proyectos button {
+        width: 100px;
+    }
+
+    /* Ajustes para la sección de 'Contacto' */
+    .contacto {
+        width: 320px;
+        padding: 20px 20px 50px 20px;
+    }
+
+    .contacto h1 {
+        font-size: 1.5rem;
+        gap: 10px;
+    }
+
+    .email-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .email {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+
+    .email-container .button {
+        width: 14%;
+        font-size: 0.9rem;
+    }
 }
