@@ -38,10 +38,15 @@
     /* transition: background-color 0.5s ease; Añadimos la transición */
 }
 
-.menu a:hover, .menu button:hover{
+.menu a:hover{
     background-color: #9febb6;
     transition: 1s;
-    
+}
+
+.menu button:hover{
+    cursor: pointer;
+    background-color: #9febb6;
+    transition: 1s;
 }
 
 .menu .idioma{
@@ -54,8 +59,9 @@
 .menu .claro{
     text-decoration: none;
     border: none;
+    border-radius: 5px;
     background-color: inherit;
-    margin: 15px;
+    padding: 9px;
 }
 
 .menu .oscuro:hover,
@@ -433,8 +439,8 @@ body.dark-mode .email-container .button {
     }
 
     .menu {
-        flex-direction: column;
-        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
         text-align: center;
     }
 
@@ -451,7 +457,7 @@ body.dark-mode .email-container .button {
     .inicio {
         width: 320px;
         flex-direction: column;
-        padding-top: 100px;
+        padding-top: 50px;
         padding-bottom: 50px;
     }
 
@@ -467,8 +473,6 @@ body.dark-mode .email-container .button {
     }
 
     .enlaces {
-        flex-direction: column;
-        gap: 10px;
         padding-top: 20px;
     }
 
@@ -550,7 +554,6 @@ body.dark-mode .email-container .button {
     }
 
     .links-proyectos {
-        flex-direction: column;
         gap: 5px;
     }
 
