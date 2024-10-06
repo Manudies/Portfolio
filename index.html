@@ -21,7 +21,7 @@
                     <a href="#contacto">Contacto</a>
                     <a href="index.html" class="idioma">ES</a>
                     <a href="index-en.html" class="idioma">EN</a>
-                    <button class="claro">
+                    <button class="claro ocultar">
                         <img src="/static/images/sun.png" alt="">
                     </button>
                     <button class="oscuro">
@@ -78,7 +78,7 @@
                                 <img src="/static/images/HTML5.png" alt="logo HTML">
                                 <img src="/static/images/CSS3.png" alt="logo CSS">
                                 <img src="/static/images/Python.png" alt="logo Python">
-                                <img src="/static/images/Flask.png" alt="logo Flask">
+                                <img class="invert" src="/static/images/Flask.png" alt="logo Flask">
                                 <img src="/static/images/SQLite.png" alt="logo SQLite">
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                                 <img src="/static/images/CSS3.png" alt="logo CSS">
                                 <img src="/static/images/React.png" alt="logo React">
                                 <img src="/static/images/Node.js.png" alt="logo Node">
-                                <img src="/static/images/Express.png" alt="logo Express">
+                                <img class="invert" src="/static/images/Express.png" alt="logo Express">
                                 <img src="/static/images/MongoDB.png" alt="logo MongoDB">
                             </div>
                         </div>
@@ -183,11 +183,11 @@
                             <a href="https://github.com/Manudies/horizontes_lejanos" target="_blank">
                                 <button> Código </button>   
                             </a>
-                            <!-- <a href="https://peliculas.manudies.com/" target="_blank">
+                            <a href="https://horizontes.manudies.com "target="_blank">
                                 <button class="live"> Live 
                                     <img src="/static/images/enlace.png" alt="logo enlace">
                                 </button>
-                            </a> -->
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -223,14 +223,19 @@
         // Obtener los botones de modo oscuro y claro
         const oscuroBtn = document.querySelector('.oscuro');
         const claroBtn = document.querySelector('.claro');
-    
-        // Alternar entre los modos
+
+        // Alternar al modo oscuro
         oscuroBtn.addEventListener('click', () => {
             document.body.classList.add('dark-mode');
+            oscuroBtn.classList.add('ocultar'); // Ocultar botón de modo oscuro
+            claroBtn.classList.remove('ocultar'); // Mostrar botón de modo claro
         });
-    
+
+        // Alternar al modo claro
         claroBtn.addEventListener('click', () => {
             document.body.classList.remove('dark-mode');
+            claroBtn.classList.add('ocultar'); // Ocultar botón de modo claro
+            oscuroBtn.classList.remove('ocultar'); // Mostrar botón de modo oscuro
         });
     </script>
     

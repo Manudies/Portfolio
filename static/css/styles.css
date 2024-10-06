@@ -186,6 +186,15 @@ main{
     background-color: #fbfafa;
     margin-bottom: 20px;
     border-radius: 15px;
+    transition: .5s;
+}
+
+@media only screen and (min-width: 620px) {
+    .tarjeta:hover{
+        width: 610px;
+        height: 290px;
+        transform:translate(-10px)
+    }
 }
 
 .titulo-tarjeta {
@@ -366,6 +375,9 @@ html {
     color: #fff;
 }
 
+.ocultar{
+    display: none;
+}
 
 /* Modo oscuro */
 
@@ -427,6 +439,10 @@ body.dark-mode .contacto .email {
 
 body.dark-mode .email-container .button {
     background-color: #3a3a3a;
+}
+
+body.dark-mode .invert{
+    filter: invert(100%) sepia(0%) saturate(7492%) hue-rotate(158deg) brightness(103%) contrast(102%);
 }
 
 
