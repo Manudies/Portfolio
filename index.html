@@ -6,6 +6,16 @@
     <title>Manuel DM - Portfolio</title>
     <link rel="stylesheet" href="static/css/styles.css">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GE478DHP6H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GE478DHP6H');
+</script>
+
 <body>
     <header id="top">
         <nav>
@@ -16,16 +26,20 @@
                 </div>
                 
                 <div class="menu">
-                    <a href="#sobre-mi"> Sobre mí</a>
-                    <a href="#proyectos">Proyectos</a>
-                    <a href="#contacto">Contacto</a>
-                    <a href="index.html" class="idioma">ES</a>
-                    <a href="index-en.html" class="idioma">EN</a>
+                    <a href="#sobre-mi"><span data-title="Sobre mí">Sobre mí</span></a>
+                    <a href="#proyectos"><span data-title="Proyectos">Proyectos</span></a>
+                    <a href="#contacto"><span data-title="Contacto">Contacto</span></a>
+                    <a href="index.html" class="idioma"><span data-title="ES">ES</span></a>
+                    <a href="index-en.html" class="idioma"><span data-title="EN">EN</span></a>
                     <button class="claro ocultar">
-                        <img src="/static/images/sun.png" alt="">
+                        <span data-title="/static/images/sun.png">
+                            <img src="/static/images/sun.png" alt="Modo claro">
+                        </span>
                     </button>
                     <button class="oscuro">
-                        <img src="/static/images/luna.png" alt="">
+                        <span data-title="/static/images/sun.png">
+                            <img src="/static/images/luna.png" alt="Modo oscuro">
+                        </span>
                     </button>
                 </div>
             </div>
@@ -200,11 +214,21 @@
                 <button class="button" onclick="openMailClient()"><img src="/static/images/flecha-correcta.png" alt=""></button>
                 <button class="button" onclick="copyToClipboard()"><img src="/static/images/copiar.png" alt=""></button>
             </div>
+            <!-- Botón de WhatsApp -->
+            <div class="whatsApp">
+                <a  href="https://wa.me/34626310517?text=Hola,%20quiero%20contactar%20contigo" target="_blank">
+                    <button class="whatsApp-button" >
+                        Contáctame en WhatsApp
+                    </button>
+                </a>
+            </div>
+            
         </section>
         <div class="scroll-button-container">
             <a href="#top" class="scroll-button"><img src="/static/images/flecha-correcta-arriba.png" alt="flecha arriba"></a>
         </div>
     </main>
+    <!-- Script para abrir correo -->
     <script>
         function openMailClient() {
             window.location.href = "mailto:manudies@gmail.com";
@@ -219,6 +243,7 @@
             });
         }
     </script>
+    <!-- Script para modo oscuro -->
     <script>
         // Obtener los botones de modo oscuro y claro
         const oscuroBtn = document.querySelector('.oscuro');

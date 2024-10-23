@@ -20,14 +20,6 @@
     align-items: center;
 }
 
-/* Crear el efecto de este enlace: https://www.youtube.com/watch?v=KwoSm0E8MOE */
-
-/* .menu a:nth-child(1){ */
-    /* background-color: #9febb6; */
-    /* transition: background-color 0.5s ease; Añadimos la transición */
-/* } */
-
-
 .menu a{
     border-radius: 5px;
     text-transform: uppercase;
@@ -35,12 +27,42 @@
     font-size: 13px;
     color: #000000;
     padding: 15px;
-    /* transition: background-color 0.5s ease; Añadimos la transición */
 }
 
-.menu a:hover{
-    background-color: #9febb6;
-    transition: 1s;
+.menu a span{
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s ease 0s;
+    transform-origin: 50% 0px 0px;
+    transform-style: preserve-3d;
+    padding: 15px;
+    border-radius: 8px;
+    }
+
+.menu a span::before{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background: #9febb6;
+    content: attr(data-title);
+    transition: #000 0.3s ease 0s;
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0px 0px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.menu a:hover span {
+    transform: rotateX(90deg) translateY(-22px);
+}
+
+.menu a:hover span::before{
+    padding: 15px;
+    background:  0% 0% #9febb6;
 }
 
 .menu button:hover{
@@ -52,7 +74,6 @@
 .menu .idioma{
     text-decoration: none;
     color: #000000;
-    /* margin: 10px; */
 }
 
 .menu .oscuro,
@@ -72,14 +93,11 @@
 .menu .oscuro img,
 .menu .claro img{
     width: 25px;
-
 }
 
 .logo-img{
     height: 60px;
 }
-
-
 
 main{
     display: flex;
@@ -94,19 +112,19 @@ main{
     align-items: center;
     justify-content: center;
     padding-top: 150px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     border-bottom: 2px solid #0b8f33;
 }
 
 .foto .foto-personal{
     object-fit: cover;
-    /* max-width: 200px; */
     max-height: 200px;
     border-radius: 0%;
     border: 3px solid #a0a0a059;
     clip-path:inset(0 0 0 0 round 50%); 
     margin-right: 30px;
 }
+
 .presentacion{
     max-width: 600px;
 }
@@ -127,13 +145,17 @@ main{
 
 .CV-button{
     background-color: #9febb6;
-    /* background: #ffffff; */
     color: #000000;
     border: 2px solid #0b8f33;
-    /* border: 1px solid #000000; */
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.CV-button:hover{
+    transition: 0.2s;
+    background-color: #0b8f33;
+    color: #ffffff;
 }
 
 .sobre-mi{
@@ -250,6 +272,7 @@ main{
 }
 
 .links-proyectos button {
+    transition: 0.5s;
     width: 81px;
     height: 30px;
     border: 2px solid #0b8f33;
@@ -262,15 +285,23 @@ main{
 }
 
 .links-proyectos a button:hover {
+    transition: 0.2s;
     background-color: #0b8f33;
+    color: #ffffff;
 }
 
 .links-proyectos a button img {
+    transition: 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30px;
     padding: 0 0 0 5px;
+}
+
+.links-proyectos a button:hover img{
+    transition: 0.2s;
+    filter: invert(1);
 }
 
 .links-proyectos a .live {
@@ -280,13 +311,11 @@ main{
     text-decoration: none;
 }
  
-
 .contacto {
     width: 600px;
     display: block;
     padding-top: 100px;
     padding-bottom: 50px;
-
 }
 
 .contacto h1{
@@ -309,9 +338,8 @@ main{
     display: flex;
     align-items: center;
     height: 70px;
-
-
 }
+
 .email {
     background-color: #dddcdc;
     border: none;
@@ -322,6 +350,7 @@ main{
     height: 10px;
     margin-right: 10px;
 }
+
 .email-container .button {
     background-color: #000000;
     border: none;
@@ -333,14 +362,11 @@ main{
     align-items: center;
     justify-content: center;
     color: #fff;
-
 }
+
 .email-container .button:hover {
     background-color: rgb(132, 132, 132);
 }
-
-
-/* Boton de scroll */
 
 html {
     scroll-behavior: smooth;
@@ -375,6 +401,28 @@ html {
     color: #fff;
 }
 
+.whatsApp{
+    display: flex;
+    justify-content: center;
+}
+
+.whatsApp-button{
+    transition: 0.5s;
+    font-weight: 800;
+    background-color: #9febb6;
+    color: #000000;
+    border: 2px solid #0b8f33;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.whatsApp-button:hover{
+    transition: 0.2s;
+    background-color: #0b8f33;
+    color: #ffffff;
+}
+
 .ocultar{
     display: none;
 }
@@ -391,16 +439,17 @@ body.dark-mode .navbar {
 }
 
 body.dark-mode .menu a {
-    color: #e0e0e0;
+    transition: 1s;
+    color: #ffffff;
+}
+
+body.dark-mode .menu a:hover {
+    transition: all 1s;
+    color: #000000;
 }
 
 body.dark-mode .menu img {
     filter: invert(1);
-}
-
-body.dark-mode .menu a:hover, 
-body.dark-mode .menu button:hover {
-    background-color: #3a3a3a;
 }
 
 body.dark-mode .enlaces img {
@@ -409,9 +458,17 @@ body.dark-mode .enlaces img {
 
 body.dark-mode .CV-button {
     background-color: #333;
-    border: 2px solid #9febb6;
+    border: 2px solid #0b8f33;
     color: #e0e0e0;
 }
+
+body.dark-mode .CV-button:hover {
+    transition: 0.2s;
+    background-color: #0b8f33;
+    color: #ffffff;
+
+}
+
 
 body.dark-mode .sobre-mi h1 img{
     filter: invert(1);

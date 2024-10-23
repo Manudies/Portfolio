@@ -14,17 +14,21 @@
                     <img class="logo-img" src="/static/images/LOGO MDM.jpeg" alt="MDM Logo">
                 </div>
                 <div class="menu">
-                    <a href="#sobre-mi">About Me</a>
-                    <a href="#proyectos">Projects</a>
-                    <a href="#contacto">Contact</a>
+                    <a href="#sobre-mi"><span data-title="About Me">About Me</span></a>
+                    <a href="#proyectos"><span data-title="Projects">Projects</span></a>
+                    <a href="#contacto"><span data-title="Contact">Contact</span></a>
 
-                    <a href="index.html" class="idioma">ES</a>
-                    <a href="index-en.html" class="idioma">EN</a>
-                    <button class="oscuro">
-                        <img src="/static/images/sun.png" alt="">
+                    <a href="index.html" class="idioma"><span data-title="ES">ES</span></a>
+                    <a href="index-en.html" class="idioma"><span data-title="EN">EN</span></a>
+                    <button class="claro ocultar">
+                        <span data-title="/static/images/sun.png">
+                            <img src="/static/images/sun.png" alt="Modo claro">
+                        </span>
                     </button>
-                    <button class="claro">
-                        <img src="/static/images/luna.png" alt="">
+                    <button class="oscuro">
+                        <span data-title="/static/images/sun.png">
+                            <img src="/static/images/luna.png" alt="Modo oscuro">
+                        </span>
                     </button>
                 </div>
             </div>
@@ -207,24 +211,29 @@
         function copyToClipboard() {
             const email = "manudies@gmail.com";
             navigator.clipboard.writeText(email).then(function() {
-                alert('Email copied to clipboard: ' + email);
+                alert('Correo copiado al portapapeles: ' + email);
             }, function(err) {
-                console.error('Error copying to clipboard', err);
+                console.error('Error al copiar al portapapeles', err);
             });
         }
     </script>
     <script>
-        // Get the dark and light mode buttons
-        const darkModeBtn = document.querySelector('.oscuro');
-        const lightModeBtn = document.querySelector('.claro');
-    
-        // Toggle between modes
-        darkModeBtn.addEventListener('click', () => {
+        // Obtener los botones de modo oscuro y claro
+        const oscuroBtn = document.querySelector('.oscuro');
+        const claroBtn = document.querySelector('.claro');
+
+        // Alternar al modo oscuro
+        oscuroBtn.addEventListener('click', () => {
             document.body.classList.add('dark-mode');
+            oscuroBtn.classList.add('ocultar'); // Ocultar botón de modo oscuro
+            claroBtn.classList.remove('ocultar'); // Mostrar botón de modo claro
         });
-    
-        lightModeBtn.addEventListener('click', () => {
+
+        // Alternar al modo claro
+        claroBtn.addEventListener('click', () => {
             document.body.classList.remove('dark-mode');
+            claroBtn.classList.add('ocultar'); // Ocultar botón de modo claro
+            oscuroBtn.classList.remove('ocultar'); // Mostrar botón de modo oscuro
         });
     </script>
     
