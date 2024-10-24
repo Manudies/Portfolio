@@ -406,6 +406,10 @@ html {
     justify-content: center;
 }
 
+.whatsApp a{
+    text-decoration: none;
+}
+
 .whatsApp-button{
     font-size: 0.9rem;
     display: flex;
@@ -434,6 +438,11 @@ html {
     justify-content: center;
     width: 25px;
     padding: 0 0 0 10px;
+}
+
+.whatsApp-button:hover img {
+    transition: 0.2s;
+    filter: invert(1);
 }
 
 .ocultar{
