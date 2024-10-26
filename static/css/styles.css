@@ -1,3 +1,27 @@
+:root {
+    /* Colores principales */
+    --color-primario: #ffffff;
+    --color-secundario: #9febb6;
+    --color-terciario: #0b8f33;
+    --color-texto: #000000;
+
+    /* Colores mail y tarjeta proyectos */
+    --color-email-bg: #dcdcdd;
+    --color-email-button-bg: #000000;
+    --color-email-button-hover-bg: rgb(132, 132, 132);
+    --color-tarjeta-bg: #fbfafa;
+
+    /* Colores de modo oscuro */
+    --color-dark-background: #121212;
+    --color-dark-navbar: #1f1f1f;
+    --color-dark-text: #e0e0e0;
+    --color-dark-tarjeta-bg: #1f1f1f;
+    --color-dark-email-bg: #333;
+    --color-dark-button-bg: #3a3a3a;
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +34,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px 30px;
-    background: #ffffff;
+    background: var(--color-primario);
 }
 
 .menu{
@@ -25,8 +49,8 @@
     text-transform: uppercase;
     text-decoration: none;
     font-size: 13px;
-    color: #000000;
     padding: 15px;
+    color: var(--color-texto);
 }
 
 .menu a span{
@@ -47,7 +71,7 @@
     position: absolute;
     top: 100%;
     left: 0px;
-    background: #9febb6;
+    background: var(--color-secundario);
     content: attr(data-title);
     transition: #000 0.3s ease 0s;
     transform: rotateX(-90deg);
@@ -62,18 +86,18 @@
 
 .menu a:hover span::before{
     padding: 15px;
-    background:  0% 0% #9febb6;
+    background:  0% 0% var(--color-secundario);
 }
 
 .menu button:hover{
     cursor: pointer;
-    background-color: #9febb6;
+    background-color: var(--color-secundario);
     transition: 1s;
 }
 
 .menu .idioma{
+    color: var(--color-texto);
     text-decoration: none;
-    color: #000000;
 }
 
 .menu .oscuro,
@@ -113,12 +137,12 @@ main{
     justify-content: center;
     padding-top: 150px;
     padding-bottom: 50px;
-    border-bottom: 2px solid #0b8f33;
+    border-bottom: 2px solid var(--color-terciario);
 }
 
 .foto .foto-personal{
     object-fit: cover;
-    max-height: 200px;
+    max-height: 150px;
     border-radius: 0%;
     border: 3px solid #a0a0a059;
     clip-path:inset(0 0 0 0 round 50%); 
@@ -144,18 +168,18 @@ main{
 }
 
 .CV-button{
-    background-color: #9febb6;
-    color: #000000;
-    border: 2px solid #0b8f33;
+    background-color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
     padding: 5px 10px;
+    color: var(--color-texto);
     border-radius: 5px;
     cursor: pointer;
 }
 
 .CV-button:hover{
     transition: 0.2s;
-    background-color: #0b8f33;
-    color: #ffffff;
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
 }
 
 .sobre-mi{
@@ -205,7 +229,7 @@ main{
     display: flex; /* Utilizamos Flexbox para crear las dos columnas */
     width: 600px;
     height: 280px;
-    background-color: #fbfafa;
+    background-color: var(--color-tarjeta-bg);
     margin-bottom: 20px;
     border-radius: 15px;
     transition: .5s;
@@ -275,19 +299,19 @@ main{
     transition: 0.5s;
     width: 81px;
     height: 30px;
-    border: 2px solid #0b8f33;
+    border: 2px solid var(--color-terciario);
     border-radius: 5px;
     cursor: pointer;
     padding: 0px 5px;
-    background-color: #9febb6;
+    background-color: var(--color-secundario);
     font-weight: bold;
     text-decoration: none;
 }
 
 .links-proyectos a button:hover {
     transition: 0.2s;
-    background-color: #0b8f33;
-    color: #ffffff;
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
 }
 
 .links-proyectos a button img {
@@ -341,7 +365,7 @@ main{
 }
 
 .email {
-    background-color: #dddcdc;
+    background-color: var(--color-email-bg);
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -352,9 +376,9 @@ main{
 }
 
 .email-container .button {
-    background-color: #000000;
     border: none;
     padding: 5px;
+    background-color: var(--color-email-button-bg);
     border-radius: 5px;
     cursor: pointer;
     margin-left: 5px;
@@ -365,7 +389,7 @@ main{
 }
 
 .email-container .button:hover {
-    background-color: rgb(132, 132, 132);
+    background-color: var(--color-email-button-hover-bg);
 }
 
 html {
@@ -379,8 +403,8 @@ html {
 
 .scroll-button {
     margin-top: 20px 0 50px 0;
-    background-color: #9febb6;
-    border: 2px solid #0b8f33;
+    background-color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
@@ -397,7 +421,7 @@ html {
 }
 
 .scroll-button:hover {
-    background-color: #0b8f33;
+    background-color: var(--color-terciario);
     color: #fff;
 }
 
@@ -417,18 +441,18 @@ html {
     justify-content: center;
     transition: 0.5s;
     font-weight: 800;
-    background-color: #9febb6;
-    color: #000000;
-    border: 2px solid #0b8f33;
+    background-color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
     padding: 5px 10px;
+    color: var(--color-texto);
     border-radius: 5px;
     cursor: pointer;
 }
 
 .whatsApp-button:hover{
     transition: 0.2s;
-    background-color: #0b8f33;
-    color: #ffffff;
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
 }
 
 .whatsApp-button img {
@@ -462,12 +486,12 @@ body.dark-mode .navbar {
 
 body.dark-mode .menu a {
     transition: 1s;
-    color: #ffffff;
+    color: var(--color-primario);
 }
 
 body.dark-mode .menu a:hover {
+    color: var(--color-texto);
     transition: all 1s;
-    color: #000000;
 }
 
 body.dark-mode .menu img {
@@ -480,14 +504,14 @@ body.dark-mode .enlaces img {
 
 body.dark-mode .CV-button {
     background-color: #333;
-    border: 2px solid #0b8f33;
+    border: 2px solid var(--color-terciario);
     color: #e0e0e0;
 }
 
 body.dark-mode .CV-button:hover {
     transition: 0.2s;
-    background-color: #0b8f33;
-    color: #ffffff;
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
 
 }
 
@@ -508,7 +532,6 @@ body.dark-mode .contacto h1 img{
 
 body.dark-mode .proyectos .tarjeta {
     background-color: #1f1f1f;
-    border: 1px solid #3a3a3a;
 }
 
 body.dark-mode .contacto .email {
@@ -537,6 +560,7 @@ body.dark-mode .invert{
         display: flex;
         flex-wrap: wrap;
         text-align: center;
+        justify-content: space-evenly
     }
 
     .menu a {
@@ -557,7 +581,7 @@ body.dark-mode .invert{
     }
 
     .foto .foto-personal {
-        max-height: 150px;
+        max-height: 100px;
         margin-right: 0;
         margin-bottom: 20px;
     }
