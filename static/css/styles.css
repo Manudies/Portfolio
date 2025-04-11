@@ -142,9 +142,10 @@ main{
 
 .foto .foto-personal{
     object-fit: cover;
-    max-height: 150px;
+    height: 150px;
+    width: 100px;
     border-radius: 0%;
-    border: 3px solid #a0a0a059;
+    /* border: 3px solid #a0a0a059; */
     clip-path:inset(0 0 0 0 round 50%); 
     margin-right: 30px;
 }
@@ -581,7 +582,6 @@ body.dark-mode .invert{
     }
 
     .foto .foto-personal {
-        max-height: 100px;
         margin-right: 0;
         margin-bottom: 20px;
     }
